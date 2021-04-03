@@ -1,0 +1,105 @@
+{
+  /**
+  * Disable CSS validation in VS Code, to allow @tailwind import and the @apply
+  * syntax in VS Code.
+  *
+  * Enable stylelint to ensure CSS is still validated though.
+  *
+  * Docs:
+  * - @see https://stackoverflow.com/a/62093553/1238150
+  * - @see https://github.com/microsoft/vscode/issues/103163#issuecomment-672272020
+  * - @see https://www.meidev.co/blog/visual-studio-code-css-linting-with-tailwind/
+  */
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "stylelint.enable": true,
+  /**
+  * LINTING & FORMATTING
+  */
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+  },
+  "eslint.validate": [
+    "graphql",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "eslint.options": {
+    "extentions": [
+      ".d.ts",
+      ".gql",
+      ".graphql",
+      ".js",
+      ".jsx",
+      ".ts",
+      ".tsx"
+    ]
+  },
+  /**
+  * EDITOR UX
+  */
+  "editor.rulers": [
+    80,
+  ],
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "files.eol": "\n",
+  /**
+  * PLUGINS SETUP
+  */
+  "todohighlight.keywords": [
+    // inspired by: https://github.com/wayou/vscode-todo-highlight/issues/93#issuecomment-390368341
+    {
+      "text": "NOTE:",
+      "color": "#ecf0f1",
+      "border": "1px solid #2980b9",
+      "borderRadius": "4px",
+      "backgroundColor": "#3498db",
+    },
+    {
+      "text": "HACK:",
+      "color": "#ecf0f1",
+      "border": "1px solid #8e44ad",
+      "borderRadius": "4px",
+      "backgroundColor": "#9b59b6",
+    },
+    {
+      "text": "XXX",
+      "color": "#ecf0f1",
+      "border": "1px solid #f39c12",
+      "borderRadius": "4px",
+      "backgroundColor": "#f1c40f",
+    },
+    {
+      "text": "FIXME:",
+      "color": "#ecf0f1",
+      "border": "1px solid #f39c12",
+      "borderRadius": "4px",
+      "backgroundColor": "#f1c40f",
+    },
+    {
+      "text": "ATTENTION:",
+      "color": "#ecf0f1",
+      "border": "1px solid #c0392b",
+      "borderRadius": "4px",
+      "backgroundColor": "#e74c3c",
+    },
+    {
+      "text": "BUG:",
+      "color": "#ecf0f1",
+      "border": "1px solid #c0392b",
+      "borderRadius": "4px",
+      "backgroundColor": "#e74c3c",
+    }
+  ],
+  /**
+  * TYPESCRIPT SETTINGS
+  */
+  "typescript.implementationsCodeLens.enabled": true,
+  "typescript.referencesCodeLens.enabled": true,
+  "typescript.tsdk": "./node_modules/typescript/lib",
+}
