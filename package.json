@@ -15,6 +15,7 @@
     "dev": "next",
     "build": "next build",
     "lint": "eslint --cache .",
+    "setup": "node scripts/setup",
     "start": "next start",
     "test": "jest",
     "prepare": "husky install"
