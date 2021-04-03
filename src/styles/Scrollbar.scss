@@ -1,0 +1,32 @@
+/** 
+* inspired by:
+* @see https://www.digitalocean.com/community/tutorials/css-scrollbars
+*/
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #9ba1ae #ced2d8;
+}
+
+/* width (vertical bar) and height (horizontal bar) */
+*::-webkit-scrollbar {
+  width: 8px; /* width of the entire scrollbar */
+  height: 8px; /* height of the entire scrollbar */
+}
+
+/* Track */
+*::-webkit-scrollbar-track {
+  @apply bg-gray-300; /* color of the tracking area */
+}
+
+/* Handle */
+*::-webkit-scrollbar-thumb {
+  @apply bg-gray-400; /* color of the scroll thumb */
+  @apply border-gray-300 border border-solid; /* creates padding around scroll thumb */
+  @apply rounded-xl; /* roundness of the scroll thumb */
+
+  &:hover {
+    @apply bg-gray-500;
+  }
+}

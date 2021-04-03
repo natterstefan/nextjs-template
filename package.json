@@ -49,8 +49,10 @@
     "jest-preset-ns": "^0.2.0",
     "postcss": "^8.2.9",
     "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-import": "^14.0.1",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.2.1",
+    "sass": "^1.32.8",
     "tailwindcss": "^2.0.4",
     "typescript": "^4.2.3"
   }
