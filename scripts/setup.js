@@ -1,3 +1,4 @@
-const copyFiles = require('./copyfiles')
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const copyfiles = require('./copyfiles')
 
-copyFiles()
+copyfiles()
