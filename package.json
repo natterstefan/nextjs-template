@@ -12,15 +12,15 @@
     "url": "https://github.com/natterstefan/nextjs-tailwind-template/issues"
   },
   "scripts": {
-    "dev": "next",
+    "build-storybook": "build-storybook",
     "build": "next build",
+    "dev": "next",
     "lint": "eslint --cache .",
+    "prepare": "husky install",
     "setup": "node scripts/setup",
     "start": "next start",
-    "test": "jest",
-    "prepare": "husky install",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "test": "jest"
   },
   "dependencies": {
     "next": "^10.1.3",
