@@ -8,7 +8,7 @@
 
 ![natterstefan/nextjs-template](./assets/github.png)
 
-Readyto go template repository for your next Next.js application! 🚀
+Ready to go template repository for your next Next.js application! 🚀
 
 ## Features
 
