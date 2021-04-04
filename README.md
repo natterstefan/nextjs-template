@@ -10,10 +10,16 @@
 This is a template repository with [Tailwind CSS](https://tailwindcss.com) in a
 Next.js project.
 
-## Start
+## Installation
 
 ```bash
 yarn
+yarn setup
+```
+
+## Start
+
+```bash
 yarn dev
 ```
 
