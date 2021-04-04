@@ -1,3 +1,6 @@
+import { ReactNode } from 'react'
+import { NextPage } from 'next'
+
 type NextConfig = {
   publicRuntimeConfig: {
     NODE_ENV: string
@@ -8,6 +11,8 @@ type NextConfig = {
   }
   serverRuntimeConfig: Record<string, unknown>
 }
+
+declare type NextPageType = NextPage & { layout: ReactNode }
 
 declare module 'next/config' {
   export default (): NextConfig => ({

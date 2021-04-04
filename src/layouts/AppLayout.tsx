@@ -1,6 +1,10 @@
 import React, { FC } from 'react'
 
+import { useChangeLocation } from '@/hooks/useChangeLanguage'
+
 export const AppLayout: FC = ({ children }) => {
+  useChangeLocation()
+
   return (
     <div className="flex h-screen overflow-hidden bg-gray-100">
       <div className="flex flex-col flex-1 w-0 overflow-hidden">
