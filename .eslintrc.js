@@ -9,4 +9,18 @@ module.exports = {
      */
     'jsx-a11y/anchor-is-valid': 0,
   },
+  overrides: [
+    {
+      files: [
+        './src/**/__stories__/*.stories.ts',
+        './src/**/__stories__/*.stories.tsx',
+      ],
+      rules: {
+        'global-require': 0,
+        'import/no-extraneous-dependencies': 0,
+        'max-classes-per-file': 0,
+        'no-console': 0,
+      },
+    },
+  ],
 }
