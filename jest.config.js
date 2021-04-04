@@ -10,6 +10,6 @@ module.exports = {
   moduleNameMapper: {
     '@/(.*)': ['<rootDir>/$1', '<rootDir>/src/$1'],
   },
-  setupFilesAfterEnv: ['jest-preset-ns/presets/react/jest-setup.js'],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   testMatch: ['/**/__tests__/*.test.ts', '/**/__tests__/*.test.tsx'],
 }

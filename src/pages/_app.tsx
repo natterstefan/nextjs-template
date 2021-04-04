@@ -1,6 +1,8 @@
 import React, { ReactNode } from 'react'
 import Head from 'next/head'
 import { AppProps } from 'next/app'
+import { CookiesProvider } from 'react-cookie'
+import { appWithTranslation } from 'next-i18next'
 
 import '../styles/index.scss'
 
@@ -24,11 +26,13 @@ function App({ Component, pageProps }: AppProps) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
       </Head>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <CookiesProvider>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </CookiesProvider>
     </>
   )
 }
 
-export default App
+export default appWithTranslation(App)

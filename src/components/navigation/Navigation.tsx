@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import { useTranslation } from 'next-i18next'
 
 const links = [
   {
@@ -11,28 +12,39 @@ const links = [
 ]
 
 export const Navigation = () => {
+  const { t } = useTranslation()
+
   return (
-    <nav>
-      <ul className="flex items-center justify-between p-8">
+    <nav className="flex items-center justify-between p-8">
+      <ul className="flex items-center justify-between space-x-4">
         <li>
-          <Link href="/">
-            <a className="text-blue-500 no-underline">Home</a>
+          <Link href="/" locale="en">
+            <a className="text-blue-500 no-underline">
+              {t('home', { context: 'EN' })}
+            </a>
           </Link>
         </li>
-        <ul className="flex items-center justify-between space-x-4">
-          {links.map(({ href, label }) => (
-            <li key={`${href}${label}`}>
-              <a
-                href={href}
-                className="no-underline btn-blue"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {label}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <li>
+          <Link href="/" locale="de">
+            <a className="text-blue-500 no-underline">
+              {t('home', { context: 'DE' })}
+            </a>
+          </Link>
+        </li>
+      </ul>
+      <ul className="flex items-center justify-between space-x-4">
+        {links.map(({ href, label }) => (
+          <li key={`${href}${label}`}>
+            <a
+              href={href}
+              className="no-underline btn-blue"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {label}
+            </a>
+          </li>
+        ))}
       </ul>
     </nav>
   )
