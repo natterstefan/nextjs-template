@@ -11,4 +11,5 @@ module.exports = {
     '@/(.*)': ['<rootDir>/$1', '<rootDir>/src/$1'],
   },
   setupFilesAfterEnv: ['jest-preset-ns/presets/react/jest-setup.js'],
+  testMatch: ['/**/__tests__/*.test.ts', '/**/__tests__/*.test.tsx'],
 }
