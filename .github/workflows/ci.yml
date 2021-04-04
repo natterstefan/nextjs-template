@@ -12,6 +12,7 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 14
-      - run: yarn install
+      - run: ./gradlew --console=plain dev
+      - run: ./gradlew --console=plain writeVersion
       - run: yarn lint
       - run: yarn test
