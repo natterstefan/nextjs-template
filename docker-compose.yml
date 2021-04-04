@@ -1,0 +1,28 @@
+#
+# Next.js Docker Setup with Nginx
+#
+# inspired by
+# @see https://steveholgado.com/nginx-for-nextjs/#adding-pm2-to-our-dockerfile
+#
+version: "3.8"
+
+services:
+  app:
+    image: natterstefan/nextjs-template:dev
+    networks:
+      - nextjs
+    env_file:
+      - .env.local
+    environment:
+      NODE_ENV: ${NODE_ENV:-production}
+  nginx:
+    image: nginx:alpine
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - 8080:80
+    networks:
+      - nextjs
+
+networks:
+  nextjs: {}

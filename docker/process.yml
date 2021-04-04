@@ -1,0 +1,14 @@
+# Docs
+# @see https://pm2.keymetrics.io/docs/usage/docker-pm2-nodejs/
+#
+# ATTENTION: cluster mode does not work
+#
+# @see https://github.com/vercel/next.js/discussions/10675#discussioncomment-54193
+#      and discussions above this comment, especially https://nttr.st/3sQDgF8!
+#
+# NOTE: pm2 start would work, but we can't use it (https://stackoverflow.com/a/60603179/1238150)
+apps:
+  - name: "app"
+    script: "node_modules/.bin/next"
+    args: "start"
+    cwd: "./"

@@ -124,3 +124,13 @@ dist
 .DS_Store
 *.pem
 tmp
+
+# build-files
+/version.js
+/version.ts
+
+# Gradle
+.gradle
+
+# storybook
+storybook-static
