@@ -13,11 +13,7 @@ const Page = () => {
         <Navigation />
         <div className="py-20">
           <h1 className="text-5xl text-center text-accent-1">
-            Next.js{' '}
-            <span aria-label="fire" role="img">
-              🔥
-            </span>{' '}
-            Tailwind Template
+            Next.js Template
           </h1>
         </div>
       </div>
