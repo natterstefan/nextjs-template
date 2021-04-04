@@ -1,5 +1,6 @@
 # nextjs-template
 
+[![Node CI](https://github.com/natterstefan/nextjs-template/actions/workflows/ci.yml/badge.svg)](https://github.com/natterstefan/nextjs-template/actions/workflows/ci.yml)
 [![GitHub issues](https://img.shields.io/github/issues/natterstefan/nextjs-template)](https://github.com/natterstefan/nextjs-template/issues)
 [![GitHub stars](https://img.shields.io/github/stars/natterstefan/nextjs-template)](https://github.com/natterstefan/nextjs-template/stargazers)
 [![GitHub license](https://img.shields.io/github/license/natterstefan/nextjs-template)](https://github.com/natterstefan/nextjs-template/blob/main/LICENSE)
