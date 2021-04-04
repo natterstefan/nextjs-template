@@ -1,15 +1,15 @@
 {
-  "name": "nextjs-tailwind-template",
+  "name": "nextjs-template",
   "author": "Stefan Natter <https://natterstefan.me>",
   "version": "0.1.0",
   "license": "MIT",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/natterstefan/nextjs-tailwind-template.git"
+    "url": "git+https://github.com/natterstefan/nextjs-template.git"
   },
   "bugs": {
-    "url": "https://github.com/natterstefan/nextjs-tailwind-template/issues"
+    "url": "https://github.com/natterstefan/nextjs-template/issues"
   },
   "scripts": {
     "build-storybook": "build-storybook",
@@ -39,6 +39,7 @@
     "@storybook/addon-postcss": "^2.0.0",
     "@storybook/builder-webpack5": "^6.2.2",
     "@storybook/react": "^6.2.2",
+    "@types/enzyme": "^3.10.8",
     "@types/node": "^14.14.37",
     "@types/react": "^17.0.3",
     "@types/react-dom": "^17.0.3",
@@ -48,7 +49,7 @@
     "enzyme": "^3.11.0",
     "eslint": "^7.23.0",
     "eslint-config-airbnb": "^18.2.1",
-    "eslint-config-ns-ts": "^1.6.0",
+    "eslint-config-ns-ts": "^1.6.1",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jest": "^24.3.3",

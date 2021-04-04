@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   /**
    * Storybook uses Webpack@4 by default, but we require Webpack@5 already.
@@ -34,6 +36,14 @@ module.exports = {
       use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
     })
 
+    /**
+     * Add support for alias-imports
+     * @see https://github.com/storybookjs/storybook/issues/11989#issuecomment-715524391
+     */
+    config.resolve.alias = {
+      ...config.resolve?.alias,
+      '@': [path.resolve(__dirname, '../src/'), path.resolve(__dirname, '../')],
+    }
     return config
   },
 }

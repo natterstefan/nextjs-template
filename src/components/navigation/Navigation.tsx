@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const links = [
   {
-    href: 'https://github.com/natterstefan/nextjs-tailwind-template',
+    href: 'https://github.com/natterstefan/nextjs-template',
     label: 'GitHub',
   },
   { href: 'https://nextjs.org/docs', label: 'NextJS Docs' },

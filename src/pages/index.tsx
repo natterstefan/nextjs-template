@@ -1,13 +1,13 @@
 import React from 'react'
 import Head from 'next/head'
 
-import { Navigation } from '../components/navigation'
+import { Navigation } from '@/components/navigation'
 
 const Page = () => {
   return (
     <>
       <Head>
-        <title>nextjs-tailwind-template</title>
+        <title>natterstefan/nextjs-template</title>
       </Head>
       <div>
         <Navigation />
