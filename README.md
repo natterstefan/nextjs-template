@@ -18,6 +18,8 @@ Ready to go template repository for your next Next.js application! 🚀
 - ⭐️ [Storybook](https://storybook.js.org/)
 - ⭐️ [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/)
 - ⭐️ [Docker](https://www.docker.com/)
+- ⭐️ [i18n](https://www.i18next.com/)
+- ⭐️ [Cypress](https://www.cypress.io/)
 - ⭐️ One-Click deployment to [Vercel](https://vercel.co/)
 
 ## Requirements

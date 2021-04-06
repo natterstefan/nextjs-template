@@ -16,7 +16,10 @@ export const Navigation = () => {
 
   return (
     <nav className="flex items-center justify-between p-8">
-      <ul className="flex items-center justify-between space-x-4">
+      <ul
+        className="flex items-center justify-between space-x-4"
+        data-cy="home-links"
+      >
         <li>
           <Link href="/" locale="en">
             <a className="text-blue-500 no-underline">

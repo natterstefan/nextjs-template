@@ -22,5 +22,14 @@ module.exports = {
         'no-console': 0,
       },
     },
+    {
+      files: ['./cypress/**/*.ts', './src/**/__cypress__/*.tsx'],
+      extends: ['plugin:cypress/recommended'],
+      rules: {
+        'jest/expect-expect': 0,
+        'jest/valid-expect': 0,
+        'jest/valid-expect-in-promise': 0,
+      },
+    },
   ],
 }
