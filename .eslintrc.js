@@ -22,8 +22,16 @@ module.exports = {
         'no-console': 0,
       },
     },
+    /**
+     * exclude jest plugin in cypress files, because test are written
+     * differently and `expect` is typed different.
+     */
     {
-      files: ['./cypress/**/*.ts', './src/**/__cypress__/*.tsx'],
+      files: [
+        './cypress/**/*.ts',
+        './cypress/**/*.tsx',
+        './src/**/__cypress__/*.tsx',
+      ],
       extends: ['plugin:cypress/recommended'],
       rules: {
         'jest/expect-expect': 0,

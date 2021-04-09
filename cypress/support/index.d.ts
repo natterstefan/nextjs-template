@@ -2,6 +2,9 @@
 // load type definitions that come with Cypress module
 /// <reference types="cypress" />
 
+/**
+ * TODO: remove and use solution proposed in commands.ts instead
+ */
 declare namespace Cypress {
   interface Chainable<Subject> {
     /**

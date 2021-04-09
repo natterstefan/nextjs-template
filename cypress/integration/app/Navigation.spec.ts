@@ -1,3 +1,6 @@
+/**
+ * TODO: document when and how to use reference types
+ */
 /// <reference types="../../support" />
 
 /**
