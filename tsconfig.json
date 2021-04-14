@@ -24,8 +24,14 @@
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  /** either exclude cypress _or_ only include src/ files to ensure that Cypress'
+  * and jest's `expect` types don't interfere with each other.
+  *
+  * inspired by:
+  * @see https://github.com/cypress-io/cypress-and-jest-typescript-example/blob/734a38e2451f6cf0341190959a24a4ca40b8ecb7/tsconfig.json
+  */
+  "include": ["next-env.d.ts", "src/**/*.ts", "src/**/*.tsx", "src/**/*.d.ts"],
   "exclude": ["build", "node_modules", "storybook-static", "tmp"]
 }

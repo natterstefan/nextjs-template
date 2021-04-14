@@ -14,6 +14,8 @@
   "scripts": {
     "build-storybook": "build-storybook",
     "build": "next build",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
     "dev": "next",
     "lint": "yarn lint:ts && yarn lint:css",
     "lint:ts": "tsc && eslint --cache \"./**/*.{ts,tsx}\"",
@@ -22,7 +24,9 @@
     "setup": "node scripts/setup",
     "start": "next start",
     "storybook": "start-storybook -p 6006",
-    "test": "jest"
+    "test": "jest",
+    "test:cypress": "start-server-and-test dev 3000 cypress:open",
+    "test:cypress:ci": "start-server-and-test dev 3000 cypress:run"
   },
   "dependencies": {
     "date-fns": "^2.19.0",
@@ -52,11 +56,13 @@
     "autoprefixer": "^10.2.5",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.2.0",
+    "cypress": "^6.8.0",
     "enzyme": "^3.11.0",
     "eslint": "^7.23.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-ns-ts": "^1.6.1",
     "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-cypress": "^2.11.2",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jest": "^24.3.3",
     "eslint-plugin-jsx-a11y": "^6.4.1",
@@ -74,6 +80,7 @@
     "prettier": "^2.2.1",
     "sass": "^1.32.8",
     "sass-loader": "^11.0.1",
+    "start-server-and-test": "^1.12.1",
     "storybook-addon-next-router": "^2.0.4",
     "style-loader": "^2.0.0",
     "stylelint": "^13.12.0",

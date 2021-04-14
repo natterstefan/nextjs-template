@@ -15,8 +15,8 @@ export const Navigation = () => {
   const { t } = useTranslation()
 
   return (
-    <nav className="flex items-center justify-between p-8">
-      <ul className="flex items-center justify-between space-x-4">
+    <nav className="flex flex-wrap items-center justify-between gap-4 p-8">
+      <ul className="flex items-center gap-4" data-cy="home-links">
         <li>
           <Link href="/" locale="en">
             <a className="text-blue-500 no-underline">
@@ -32,7 +32,7 @@ export const Navigation = () => {
           </Link>
         </li>
       </ul>
-      <ul className="flex items-center justify-between space-x-4">
+      <ul className="flex flex-wrap items-center gap-4">
         {links.map(({ href, label }) => (
           <li key={`${href}${label}`}>
             <a
