@@ -69,6 +69,7 @@ with(lovely.dockerFiles) {
             "src/**",
             ".npmrc",
             "babel.config.js",
+            "next-i18next.config.js",
             "next.config.js",
             "package.json",
             "postcss.config.js",

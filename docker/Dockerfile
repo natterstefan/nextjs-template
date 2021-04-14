@@ -27,6 +27,7 @@ COPY package.json ./
 
 # files for building the app
 COPY babel.config.js tsconfig.json ./
+COPY next-i18next.config.js ./
 COPY next.config.js postcss.config.js tailwind.config.js ./
 
 # source code of the app
@@ -56,6 +57,7 @@ COPY docker-entrypoint.sh process.yml ./
 # copy files
 COPY --from=deps /app/node_modules ./node_modules
 COPY --from=builder /app/package.json ./
+COPY --from=builder /app/next-i18next.config.js ./
 COPY --from=builder /app/next.config.js ./
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next ./.next

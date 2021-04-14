@@ -1,0 +1,13 @@
+build
+gradle
+node_modules
+tmp
+version.ts
+
+# generated files
+/graphql/schema.graphql
+/graphql/schema.json
+__generated__
+
+# storybook
+storybook-static
