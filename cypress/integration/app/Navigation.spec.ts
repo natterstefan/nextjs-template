@@ -1,5 +1,6 @@
 /**
  * TODO: document when and how to use reference types
+ * TODO: or try https://github.com/cypress-io/cypress/issues/1152#issuecomment-509729392
  */
 /// <reference types="../../support" />
 
