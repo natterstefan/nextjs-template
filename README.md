@@ -40,7 +40,7 @@ available versions.
 ## Installation & Setup
 
 ```bash
-./gradlew dev
+yarn
 ```
 
 Once the task is completed you can start the app with `yarn dev`.

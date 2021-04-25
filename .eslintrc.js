@@ -39,5 +39,14 @@ module.exports = {
         'jest/valid-expect-in-promise': 0,
       },
     },
+    {
+      files: ['./scripts/**/*.js'],
+      rules: {
+        'global-require': 0,
+        'import/no-extraneous-dependencies': 0,
+        'no-console': 0,
+        '@typescript-eslint/no-var-requires': 0,
+      },
+    },
   ],
 }
