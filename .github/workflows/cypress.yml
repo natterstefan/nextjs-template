@@ -15,9 +15,7 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 14
-      - uses: actions/cache@v2
-        with:
-          path: node_modules
-          key: natterstefan-nextjs-template-${{ hashFiles('**/yarn.lock') }}
+        # do not use actions/cache@v2 here or one needs to handle caching
+        # https://docs.cypress.io/guides/continuous-integration/introduction#Caching
       - run: yarn
       - run: yarn test:cypress:ci
