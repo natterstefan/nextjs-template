@@ -12,7 +12,10 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 14
-      - run: ./gradlew --console=plain dev
-      - run: ./gradlew --console=plain writeVersion
+      - uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: natterstefan-nextjs-template-${{ hashFiles('**/yarn.lock') }}
+      - run: yarn
       - run: yarn lint
       - run: yarn test
