@@ -15,8 +15,18 @@ subprojects {
 }
 
 val writeVersion by tasks.creating {
+    group = "Development"
+    description = "Write current version to file"
+
     val versionFile = file("version.js")
-    versionFile.writeText("module.exports = '${project.version.toString()}';")
+    doLast {
+        exec {
+            commandLine(
+                "node",
+                "scripts/version"
+            )
+        }
+    }
     outputs.file(versionFile)
 }
 
@@ -33,25 +43,6 @@ val runDockerBuild by tasks.creating {
                 "-f",
                 "docker-compose.yml",
                 "up"
-            )
-        }
-    }
-}
-
-val dev by tasks.creating {
-    group = "Development"
-    description = "Initialize Repository"
-    dependsOn("writeVersion")
-    doLast {
-        exec {
-            commandLine(
-                "yarn"
-            )
-        }
-        exec {
-            commandLine(
-                "yarn",
-                "setup"
             )
         }
     }
