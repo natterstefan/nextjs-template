@@ -1,0 +1,60 @@
+# inspired by
+# @see https://github.com/Jungwoo-An/react-editor-js/blob/1375dea6a3704d16bb234eaa58db6e4104807a11/.github/workflows/publish.yml
+name: release
+
+on:
+  workflow_dispatch:
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    if: "! contains(github.event.head_commit.message, '[skip ci]')"
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: natterstefan-nextjs-template-${{ hashFiles('**/yarn.lock') }}
+      - run: yarn install
+      - run: chmod -R +x ./node_modules/.bin
+
+  validate:
+    needs: install
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set @natterstefan-bot as committer
+        run: |
+          git config user.name "natterstefan Bot"
+          git config user.email "natterstefan-bot@users.noreply.github.com"
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: natterstefan-nextjs-template-${{ hashFiles('**/yarn.lock') }}
+      - run: yarn install
+      - run: yarn lint
+      - run: yarn test
+      - run: yarn test:cypress:ci
+
+  publish:
+    needs: validate
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: natterstefan-nextjs-template-${{ hashFiles('**/yarn.lock') }}
+      - run: npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
