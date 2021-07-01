@@ -78,7 +78,7 @@
     "is-ci": "^3.0.0",
     "jest": "^26.6.3",
     "jest-preset-ns": "^0.2.0",
-    "postcss": "^8.2.12",
+    "postcss": "^8.3.5",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-import": "^14.0.1",
     "postcss-loader": "^5.2.0",
