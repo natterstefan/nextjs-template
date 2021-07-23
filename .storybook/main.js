@@ -13,6 +13,8 @@ module.exports = {
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
+    'storybook-addon-next-router',
+    'storybook-addon-i18next/register',
     {
       /**
        * NOTE: fix Storybook issue with PostCSS@8
@@ -44,6 +46,24 @@ module.exports = {
       ...config.resolve?.alias,
       '@': [path.resolve(__dirname, '../src/'), path.resolve(__dirname, '../')],
     }
+
+    /**
+     * Fixes issue with `next-i18next` and is ready for webpack@5
+     * @see https://github.com/isaachinman/next-i18next/issues/1012#issuecomment-792697008
+     * @see https://github.com/storybookjs/storybook/issues/4082#issuecomment-758272734
+     * @see https://webpack.js.org/migrate/5/
+     * 
+     * source: https://github.com/isaachinman/next-i18next/issues/1012#issuecomment-818042184
+     */
+    config.resolve.fallback = {
+      ...config.resolve?.fallback,
+      fs: false,
+      // tls: false,
+      // net: false,
+      // module: false,
+      // path: require.resolve('path-browserify'),
+    }
+
     return config
   },
 }

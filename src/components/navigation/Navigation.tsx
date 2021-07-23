@@ -12,7 +12,7 @@ const links = [
 ]
 
 export const Navigation = () => {
-  const { t } = useTranslation()
+  const { t } = useTranslation('common')
 
   return (
     <nav className="flex flex-wrap items-center justify-between gap-4 p-8">
@@ -20,7 +20,7 @@ export const Navigation = () => {
         <li>
           <Link href="/" locale="en">
             <a className="text-blue-500 no-underline">
-              {t('home', { context: 'EN' })}
+              {t('common:home', { context: 'EN' })}
             </a>
           </Link>
         </li>
