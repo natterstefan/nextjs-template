@@ -13,8 +13,13 @@ const version = require('./version')
  * – It should be availabe already: https://github.com/vercel/next.js/blob/canary/packages/next/next-server/server/config-shared.ts#L12
  */
 const nextConfig = {
-  poweredByHeader: false,
+  eslint: {
+    // We have manual checks in place to make sure we do not build dangerous
+    // code.
+    ignoreDuringBuilds: true,
+  },
   i18n,
+  poweredByHeader: false,
   publicRuntimeConfig: {
     NODE_ENV: process.env.NODE_ENV,
     VERSION: version,

@@ -1,5 +1,9 @@
 module.exports = {
-  extends: 'eslint-config-ns-ts',
+  extends: [
+    'eslint-config-ns-ts',
+    // @see https://nextjs.org/docs/basic-features/eslint
+    'plugin:@next/next/recommended'
+  ],
   rules: {
     /**
      * This rule was disabled because of NextJS' Link API.
