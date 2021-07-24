@@ -25,7 +25,7 @@ describe('Navigation', () => {
 
     expect(useRouter().push).toHaveBeenCalledWith('/', '/', {
       locale: 'de',
-      scroll: true,
+      scroll: undefined,
       shallow: undefined,
     })
   })
