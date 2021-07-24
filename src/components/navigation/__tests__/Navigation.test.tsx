@@ -14,6 +14,7 @@ describe('Navigation', () => {
 
   it('renders Link', () => {
     const wrapper = mount(<Navigation />)
+    expect(wrapper.find(Link).first().text()).toStrictEqual('common:home')
     expect(wrapper.find(Link).first().prop('href')).toStrictEqual('/')
   })
 

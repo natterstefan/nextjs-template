@@ -4,8 +4,6 @@ import 'jest-preset-ns/presets/react/jest-setup.js'
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17'
 import { setConfig } from 'next/config'
 import { PHASE_DEVELOPMENT_SERVER } from 'next/constants'
-import i18n from 'i18next'
-import { initReactI18next } from 'react-i18next'
 import { NextRouter } from 'next/router'
 import { configure } from 'enzyme'
 
@@ -25,29 +23,6 @@ const { publicRuntimeConfig, serverRuntimeConfig } = NextConfig(
  * @see https://github.com/vercel/next.js/issues/4024#issuecomment-386016077
  */
 setConfig({ publicRuntimeConfig, serverRuntimeConfig })
-
-/**
- * Setup i18n in tests
- *
- * @see https://github.com/i18next/react-i18next/blob/552ed79036c28f282afe7c6ccb525b82b76e71d5/example/test-jest/src/setupTests.js#L4-L23
- * @see https://github.com/isaachinman/next-i18next/issues/377#issuecomment-700516821
- */
-i18n.use(initReactI18next).init({
-  lng: 'en',
-  fallbackLng: 'en',
-
-  // have a common namespace used around the full app
-  ns: ['common'],
-  defaultNS: 'common',
-
-  // debug: true,
-
-  interpolation: {
-    escapeValue: false, // not needed for react!!
-  },
-
-  resources: { en: { common: {} } },
-})
 
 /**
  * mockRouter mocks the initial router state of Next.js
