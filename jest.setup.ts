@@ -1,17 +1,12 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable import/no-extraneous-dependencies */
 import 'jest-preset-ns/presets/react/jest-setup.js'
-import Adapter from '@wojtekmaj/enzyme-adapter-react-17'
 import { setConfig } from 'next/config'
 import { PHASE_DEVELOPMENT_SERVER } from 'next/constants'
 import { NextRouter } from 'next/router'
-import { configure } from 'enzyme'
 
 // @ts-ignore
 import NextConfig from './next.config'
-
-// @see https://github.com/natterstefan/jest-preset-ns/issues/15
-configure({ adapter: new Adapter() })
 
 const { publicRuntimeConfig, serverRuntimeConfig } = NextConfig(
   PHASE_DEVELOPMENT_SERVER,
