@@ -1,7 +1,5 @@
-import React, { Suspense } from 'react';
-import { RouterContext } from "next/dist/next-server/lib/router-context";
-// import { I18nextProvider } from 'react-i18next';
-import { withI18next } from 'storybook-addon-i18next';
+import { Suspense } from 'react'
+import { RouterContext } from 'next/dist/next-server/lib/router-context'
 
 import '../src/styles/index.scss'
 
@@ -22,11 +20,20 @@ export const parameters = {
     asPath: '/', // defaults to `/`
     query: {}, // defaults to `{}`
     push() {}, // defaults to using addon actions integration, can override any method in the router
-  }
+  },
+  // @see https://github.com/stevensacks/storybook-react-i18next
+  i18n,
+  locale: 'en',
+  locales: {
+    en: 'English',
+    de: 'Deutsch',
+  },
 }
 
 export const decorators = [
-  // Story => <I18nextProvider i18n={i18n}><Story /></I18nextProvider>,
-  withI18next({ i18n, languages: { en: 'English', de: 'Deutsch' }}),
-  Story => <Suspense fallback='loading...'><Story /></Suspense>
+  Story => (
+    <Suspense fallback={<div>loading...</div>}>
+      <Story />
+    </Suspense>
+  ),
 ]

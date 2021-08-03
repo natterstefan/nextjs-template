@@ -14,7 +14,6 @@ module.exports = {
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     'storybook-addon-next-router',
-    'storybook-addon-i18next/register',
     {
       /**
        * NOTE: fix Storybook issue with PostCSS@8
@@ -27,6 +26,7 @@ module.exports = {
         },
       },
     },
+    'storybook-react-i18next',
   ],
   webpackFinal: config => {
     /**
@@ -52,7 +52,7 @@ module.exports = {
      * @see https://github.com/isaachinman/next-i18next/issues/1012#issuecomment-792697008
      * @see https://github.com/storybookjs/storybook/issues/4082#issuecomment-758272734
      * @see https://webpack.js.org/migrate/5/
-     * 
+     *
      * source: https://github.com/isaachinman/next-i18next/issues/1012#issuecomment-818042184
      */
     config.resolve.fallback = {
