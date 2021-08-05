@@ -13,5 +13,20 @@
 // https://on.cypress.io/configuration
 // ***********************************************************
 
+/**
+ * ATTENTION: does not work yet!
+ *
+ * In order to use styles in component tests, we have to import the generated
+ * tailwind.css file here. Next's webpack config will not allow adding *.css
+ * files on component level, except for CSS Modules (which we don't use).
+ *
+ * inspired by
+ * @see https://github.com/cypress-io/cypress/issues/16879#issuecomment-861039210
+ *
+ * Further reading material
+ * @see https://nextjs.org/docs/messages/css-global
+ */
+import '../../dist/cypress.css'
+
 import './commands'
 import './console'
