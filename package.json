@@ -14,6 +14,7 @@
   "scripts": {
     "build-storybook": "build-storybook",
     "build": "next build",
+    "build:css": "tailwindcss -i src/styles/index.scss -o dist/cypress.css",
     "cypress:open": "cypress open",
     "cypress:open:react": "cypress open-ct",
     "cypress:run": "cypress run",
@@ -22,6 +23,7 @@
     "lint:ts": "tsc && eslint --cache \"./**/*.{ts,tsx}\"",
     "lint:css": "stylelint --cache './**/*.{ts,tsx,scss}'",
     "prepare": "node scripts/setup && is-ci || husky install",
+    "precypress:open:react": "yarn build:css",
     "start": "next start",
     "storybook": "start-storybook -p 6006 -s ./public",
     "test": "jest",
