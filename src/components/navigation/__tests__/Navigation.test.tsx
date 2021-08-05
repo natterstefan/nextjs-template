@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 
 import { mockNextUseRouter } from '@/jest.setup'
 
-import { Navigation } from '..'
+import { Standard } from '../__stories__/Navigation.stories'
 
 describe('Navigation', () => {
   beforeAll(() => {
@@ -13,13 +13,13 @@ describe('Navigation', () => {
   })
 
   it('renders Link', () => {
-    const wrapper = mount(<Navigation />)
+    const wrapper = mount(<Standard {...Standard.args} />)
     expect(wrapper.find(Link).first().text()).toStrictEqual('common:home')
     expect(wrapper.find(Link).first().prop('href')).toStrictEqual('/')
   })
 
   it('renders link to German home page', () => {
-    const wrapper = mount(<Navigation />)
+    const wrapper = mount(<Standard {...Standard.args} />)
 
     const germanLink = wrapper.find(Link).at(1)
     germanLink.simulate('click')
