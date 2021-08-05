@@ -58,10 +58,10 @@ module.exports = {
     config.resolve.fallback = {
       ...config.resolve?.fallback,
       fs: false,
-      // tls: false,
-      // net: false,
-      // module: false,
-      // path: require.resolve('path-browserify'),
+      tls: false,
+      net: false,
+      module: false,
+      path: require.resolve('path-browserify'),
     }
 
     return config

@@ -24,8 +24,8 @@ i18n
   // init i18next
   // for all options read: https://www.i18next.com/overview/configuration-options
   .init({
-    lng: 'en',
-    fallbackLng: 'en',
+    lng: supportedLngs[0],
+    fallbackLng: supportedLngs[0],
     // have a common namespace used around the full app
     ns,
     defaultNS: ns[0],
@@ -34,20 +34,7 @@ i18n
       escapeValue: false, // not needed for react!!
     },
     supportedLngs,
-    // resources: {
-    //   en: {
-    //     'common': {
-    //       "home": "Home GERMAN",
-    //       "home_EN": "Home English"
-    //     }
-    //   },
-    //   de: {
-    //     'common': {
-    //       "home": "Home DEUTSCH",
-    //       "home_EN": "Home ENGLISCH"
-    //     }
-    //   }
-    // },
+    whitelist: supportedLngs,
   })
 
 supportedLngs.forEach(lang => {
