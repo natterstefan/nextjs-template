@@ -14,6 +14,7 @@ describe('Navigation', () => {
 
   it('renders Link', () => {
     const wrapper = mount(<Navigation />)
+    expect(wrapper.find(Link).first().text()).toStrictEqual('common:home')
     expect(wrapper.find(Link).first().prop('href')).toStrictEqual('/')
   })
 
@@ -25,7 +26,7 @@ describe('Navigation', () => {
 
     expect(useRouter().push).toHaveBeenCalledWith('/', '/', {
       locale: 'de',
-      scroll: true,
+      scroll: undefined,
       shallow: undefined,
     })
   })
