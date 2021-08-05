@@ -7,10 +7,11 @@ const ns = ['common']
 const supportedLngs = ['en', 'de']
 
 /**
- * Examples
- * - @see https://github.com/i18next/react-i18next/blob/c383abdb8d0f874a64bea3147a3dd3b9e1853f5e/example/storybook/src/i18n.js#L6-L24
- * - @see https://github.com/i18next/react-i18next/blob/7cfab9746b3ccc6f833cd9c892e7c3c804944a5e/example/react-typescript4.1/namespaces/src/i18n/config.ts#L13
+ * Inspired by and uses:
  * - @see https://github.com/stevensacks/storybook-react-i18next
+ *
+ * Other Examples:
+ * - @see https://github.com/i18next/react-i18next/blob/c383abdb8d0f874a64bea3147a3dd3b9e1853f5e/example/storybook/src/i18n.js#L6-L24
  */
 i18n
   // load translation using http -> see /public/locales
